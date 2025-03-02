@@ -1,0 +1,180 @@
+<html>
+<meta name="viewport" content="width=device-width" , initial-scale=1>
+
+<head>
+    <style>
+        body {
+            background-color: #3e161b;
+        }
+
+        #head {
+            color: white;
+            width: 10%;
+            position: relative;
+            width: 100%;
+            height: 75px;
+        }
+
+        h1 {
+            float: left;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            position: relative;
+            width: 50%;
+            float: right;
+            color: white;
+            justify-content: space-evenly;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        ul li ul {
+            list-style-type: none;
+            display: none;
+            position: absolute;
+            text-align: left;
+            font-size: 15px;
+            width: 120px;
+            padding: 0;
+            margin: 0;
+            background-color: red;
+            font-family: arial;
+        }
+
+        #ul1,
+        #ul3,
+        #ul4 {
+            width: 90px;
+        }
+
+        ul li {
+            position: relative;
+        }
+
+        img {
+            position: relative;
+            float: right;
+            top: 50px;
+            right: 150px;
+        }
+
+        #arr {
+            position: relative;
+            top: 100px;
+            left: 0px;
+            width: 45%;
+            font-size: 27px;
+            color: white
+        }
+
+        h3 {
+            font-family: Forte;
+            color: orange;
+            font-weight: 5px;
+        }
+
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            font-family: arial;
+        }
+
+        #or {
+            background-color: orange;
+            width: 120px;
+            height: 40px;
+            border-radius: 30px;
+            border: none;
+            font-size: 15px;
+        }
+
+        #con {
+            border: 2px solid white;
+            border-radius: 30px;
+            height: 40px;
+            width: 120px;
+            font-size: 15px;
+            background-color: transparent;
+            color: white;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+        ul a{text-decoration: none;color: white;}
+    </style>
+</head>
+
+<body>
+    <div id="head">
+        <h1>Coffee</h1>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li id="li1">Menu
+                <ul id="ul1">
+                    <a href="Coffee Ad.html" target="_blank"><li>Order Coffee</li></a>
+                    <li>Looking for partnership?</li>
+                </ul>
+            </li>
+            <li id="li2">Testimonials
+                <ul id="ul2">
+                    <li>Our Testimonials</li>
+                </ul>
+            </li>
+            <li id="li3">Gallery
+                <ul id="ul3">
+                    <li>Photos</li>
+                    <li>Videos</li>
+                </ul>
+            </li>
+            <li id="li4">Contact
+                <ul id="ul4">
+                    <li>Phone</li>
+                    <li>Email</li>
+                    <li>Address</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <img src="C:\Users\HP\OneDrive\图片\Screenshots 1\Screenshot 2025-02-14 150206.png" height=550px width="550">
+    <div id="arr">
+        <h3>Best Coffee</h3>
+        <h2>Make your day great with our<br>special coffee!</h2>
+        <p>Welcome to our coffee paradise where every bean tells<br>a story and every cup sparks joy.</p>
+        <div id="buttons">
+            <a href="Coffee Ad.html" target="_blank"><button id="or">Order Now</button></a>
+            <button id="con">Contact Us</button>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            $("#li1").click(() => {
+                $("#ul1").slideToggle(2000)
+                $("#ul1").css("display", "block")
+            });
+            $("#li2").click(() => {
+                $("#ul2").slideToggle(2000)
+                $("#ul2").css("display", "block")
+            });
+            $("#li3").click(() => {
+                $("#ul3").slideToggle(2000)
+                $("#ul3").css("display", "block")
+            });
+            $("#li4").click(() => {
+                $("#ul4").slideToggle(2000)
+                $("#ul4").css("display", "block")
+            });
+        })
+    </script>
+</body>
+
+</html>
