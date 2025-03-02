@@ -1,0 +1,108 @@
+<html>
+    <meta content="width=device-width", initial-scale=1>
+    <head>
+        <style>
+            #deco{border: 1px solid;width: 15%;padding: 10px;margin: auto;height: 225px;background-color: rgba(0,0,0);margin-top: 170px;}
+            .btns{height: 200px;line-height: 45px;padding-top: 5px;}
+            button{border:none;background-color: rgb(12, 211, 12);color: black;width: 53px;height: 40px;border-radius: 10px;font-size: 17px;}
+            input[type=text]{width: 168px;height: 40px;border-radius: 10px;border: none;}
+            #c{margin-top:1px;}
+        </style>
+    </head>
+    <body>
+        <div id="deco">
+        <input type="text" id="calc">
+        <button id="c">C</button><br>
+        <div class="btns">
+        <button id="one">1</button>
+        <button id="two">2</button>
+        <button id="three">3</button>
+        <button id="divide">/</button><br>
+        <button id="four">4</button>
+        <button id="five">5</button>
+        <button id="six">6</button>
+        <button id="mul">*</button><br>
+        <button id="seven">7</button>
+        <button id="eight">8</button>
+        <button id="nine">9</button>
+        <button id="minus">-</button><br>
+        <button id="zero">0</button>
+        <button id="dot">.</button>
+        <button id="equal">=</button>
+        <button id="add">+</button>
+        </div>
+        </div>
+        <script>
+            let txt=document.getElementById("calc");
+            const clear=document.getElementById("c");
+            const one=document.getElementById("one");
+            const two=document.getElementById("two");
+            const three=document.getElementById("three");
+            const divide=document.getElementById("divide");
+            const four=document.getElementById("four");
+            const five=document.getElementById("five");
+            const six=document.getElementById("six");
+            const mul=document.getElementById("mul");
+            const seven=document.getElementById("seven");
+            const eight=document.getElementById("eight");
+            const nine=document.getElementById("nine");
+            const minus=document.getElementById("minus");
+            const zero=document.getElementById("zero");
+            const dot=document.getElementById("dot");
+            const equal=document.getElementById("equal");
+            const add=document.getElementById("add");
+            one.addEventListener("click",()=>{
+                txt.value+="1";
+            });
+            two.addEventListener("click",()=>{
+                txt.value+="2";
+            });
+            three.addEventListener("click",()=>{
+                txt.value+="3"
+            });
+            divide.addEventListener("click",()=>{
+                txt.value+="/";
+            });
+            four.addEventListener("click",()=>{
+                txt.value+="4";
+            });
+            five.addEventListener("click",()=>{
+                txt.value+="5"
+            });
+            six.addEventListener("click",()=>{
+                txt.value+="6";
+            });
+            mul.addEventListener("click",()=>{
+                txt.value+="*";
+            });
+            seven.addEventListener("click",()=>{
+                txt.value+="7"
+            });
+            eight.addEventListener("click",()=>{
+                txt.value+="8";
+            });
+            nine.addEventListener("click",()=>{
+                txt.value+="9";
+            });
+            minus.addEventListener("click",()=>{
+                txt.value+="-"
+            });
+            zero.addEventListener("click",()=>{
+                txt.value+="0";
+            });
+            dot.addEventListener("click",()=>{
+                txt.value+=".";
+            });
+            add.addEventListener("click",()=>{
+                txt.value+="+"
+            });
+            equal.addEventListener("click",()=>{
+                var a=eval(txt.value);
+                txt.value=a;
+            });
+            clear.addEventListener("click",()=>{
+                txt.value=""
+            });
+        </script>
+    </body>
+</html>
